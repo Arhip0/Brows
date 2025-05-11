@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Брови Барнаул,ANGELINABROWS,Сделать брови барнаул, ">
+    <title> ANGELINABROWS | Профессиональный уход за бровями</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Основные стили */
+        :root {
+            --primary-color: #d4af8e;
+            --secondary-color: #5a3921;
+            --light-color: #f9f5f0;
+            --dark-color: #3a2c21;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', Arial, sans-serif;
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Шапка */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%; 
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: var(--primary-color);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+        
+        /* Герой-секция */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("img gel/Шапка.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding-top: 80px;
+        }
+        
+        .hero-content h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .hero-content p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+        
+        /* Услуги */
+        .services {
+            padding: 100px 0;
+            background-color: var(--light-color);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 36px;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            color: #777;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-img {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .service-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .service-card:hover .service-img img {
+            transform: scale(1.1);
+        }
+        
+        .service-content {
+            padding: 25px;
+        }
+        
+        .service-content h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+        
+        .service-content p {
+            margin-bottom: 20px;
+            color: #666;
+        }
+        
+        .price {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        /* О нас */
+        .about {
+            padding: 100px 0;
+            background-color: white;
+        }
+        
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .about-img {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .about-img img {
+            width: 300px;
+            height: auto;
+            display: block;
+        }
+        
+        .about-content h2 {
+            font-size: 36px;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+        
+        .about-content p {
+            margin-bottom: 20px;
+            color: #666;
+        }
+        
+        /* Мастера */
+        .masters {
+            padding: 100px 0;
+            background-color: var(--light-color);
+        }
+        
+        .masters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .master-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .master-img {
+            height: 300px;
+            overflow: hidden;
+        }
+        
+        .master-img img {
+            width: 500px;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .master-info {
+            padding: 20px;
+        }
+        
+        .master-info h3 {
+            font-size: 22px;
+            margin-bottom: 5px;
+            color: var(--secondary-color);
+        }
+        
+        .master-info p {
+            color: var(--primary-color);
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            color: var(--dark-color);
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        /* Запись */
+        .booking {
+    padding: 10px 0;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    
+}
+        
+        .booking-container {
+    width: 100%;
+    max-width: 600px; 
+    margin: 0 auto;
+}
+        
+        .booking-form {
+    background-color: var(--light-color);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    width: 100%; 
+}
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--secondary-color);
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 16px;
+        }
+        
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s;
+    width: auto; 
+    display: inline-block; 
+    margin-top: 20px; 
+    text-decoration: none; 
+}
+        
+        .submit-btn a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 12px 30px;
+}
+        
+        /* Футер */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-col h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+        
+        .footer-col p, 
+        .footer-col a {
+            color: #bbb;
+            margin-bottom: 10px;
+            display: block;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-col a:hover {
+            color: var(--primary-color);
+        }
+        
+        .contact-info {
+            margin-bottom: 20px;
+        }
+        
+        .contact-info div {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .contact-info i {
+            margin-right: 10px;
+            color: var(--primary-color);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #bbb;
+            font-size: 14px;
+        }
+        
+        /* Мобильное меню */
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 24px;
+        }
+        
+        /* Адаптивность */
+        @media (max-width: 992px) {
+            .about-container,
+            .booking-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-img,
+            .booking-img {
+                order: -1;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                padding: 20px;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+                transition: clip-path 0.4s ease-out;
+            }
+            
+            nav.active {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            nav ul li {
+                margin: 10px 0;
+            }
+            
+            .hero-content h1 {
+                font-size: 36px;
+            }
+            
+            .hero-content p {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Шапка -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">ANGELINA <span>BROWS</span></a>
+            
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#masters">Мастера</a></li>
+                    <li><a href="#booking">Запись</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Герой-секция -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <h1>Идеальные брови - ваш стиль, наше искусство</h1>
+            <p> Создадим идеальную форму, подчеркивающую вашу естественную красоту.</p>
+            <a href="#booking" class="btn">Записаться онлайн</a>
+        </div>
+    </section>
+
+    <!-- Услуги -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Наши услуги</h2>
+                <p>Мы предлагаем полный спектр услуг по уходу за бровями, используя только профессиональные материалы и техники.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="img gel/Моделей 1.jpg" alt="Коррекция бровей">
+                    </div>
+                    <div class="service-content">
+                        <h3>Долговременная укладка</h3>
+                        <p>Процедура, которая придает бровям ухоженный вид на 4-6 недель.</p>
+                        <div class="price">от 1500 ₽</div>
+                    </div>
+                </div>
+                
+
+            
+            
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="img gel/Модель 7.jpg" alt="Окрашивание бровей">
+                    </div>
+                    <div class="service-content">
+                        <h3>Окрашивание бровей</h3>
+                        <p>Окрашивание стойкой краской или хной для выразительного взгляда.</p>
+                        <div class="price">от 1000 ₽</div>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="img gel/модель 2.jpg" alt="Окрашивание бровей">
+                    </div>
+                    <div class="service-content">
+                        <h3>Окрашивание ресниц</h3>
+                        <p>-Окрашивание ресниц - это нанесение на волоски специального пигмента — синтетической краски.</p>
+                        <div class="price">от 600 ₽</div>
+                    </div>
+                </div>
+
+                
+                
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="img gel/Коррекция.jpg" alt="Ламинирование бровей">
+                    </div>
+                    <div class="service-content">
+                        <h3>Коррекция бровей</h3>
+                        <p>ППрофессиональная коррекция формы бровей с учетом особенностей вашего лица.</p>
+                        <div class="price">от 500 ₽</div>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="img gel/Gell2.jpg" alt="Ламинирование бровей">
+                    </div>
+                    <div class="service-content">
+                        <h3> Депиляция одной зоны лица</h3>
+                        <p>Процедура, которая придает бровям ухоженный вид на 4-6 недель.</p>
+                        <div class="price">от 150 ₽</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- О нас -->
+    <section class="about" id="about">
+        <div class="container about-container">
+            <div class="about-content">
+                <h2>Обомне </h2>
+                <p>Привет! Меня зовут Ангелина, и я профессиональный мастер бровей<br> с 3-летним опытом. Моя миссия – помогать мужчинам и девушкам обрести выразительный взгляд и уверенность в себе через идеальную форму и ухоженность бровей.</p>
+                <p>Я работаю в Барнауле и с трепетом отношусь к каждому клиенту, потому что верю: красивые брови – это не просто тренд, а часть индивидуального стиля.</p>
+                <p>Я работаю только с профессионалным Оборудованием таким как (SHIK)</p>
+            </div>
+            
+            <div class="about-img">
+                <img src="img gel/Оборудование.jpg" alt="Студия бровей">
+            </div>
+        </div>
+    </section>
+
+    <!-- Мастера -->
+    <section class="masters" id="masters">
+        <div class="container">
+            <div class="section-title">
+                <h2>Наши мастера</h2>
+                
+            </div>
+            
+        
+                
+                <div class="master-card">
+                    <div class="master-img">
+                        <img src="img gel/Gel.jpg" >
+                    </div>
+                    <div class="master-info">
+                        <h3>Ангелина</h3>
+                        <p>Главный мастер</p>
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/angelinak_brows?igsh=MWs4M2JnMjJsdHpvMA=="><i class="fab fa-instagram"></i></a>
+                            <a href="https://vk.com/id137870113"><i class="fab fa-vk"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                
+    </section>
+
+    <!-- Запись -->
+<section class="booking" id="booking">
+    <div class="container">
+        <div class="booking-container">
+            <div class="booking-form">
+                <h2>Вы можете записаться написав нам!</h2>
+                <button class="submit-btn">
+                    <a href="https://t.me/angelinakbrows" target="_blank">Написать нам в Telegram</a>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Футер -->
+    <footer id="contacts">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>BrowStudio</h3>
+                    <p>Профессиональный уход за бровями в самом центре города. Индивидуальный подход к каждому клиенту.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Контакты</h3>
+                    <div class="contact-info">
+                        <div>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Взлетная ,33к1 Баранул<br> Пролетарская ,151к2 Барнаул</span>
+                        </div>
+                        <div>
+                            <i class="fas fa-phone"></i>
+                            <span>+7 913 099 7282</span>
+                        </div>
+                        <div>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@browstudio.ru</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Часы работы</h3>
+                    <p>По предворительной записи </p>
+                    
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Соцсети</h3>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/angelinak_brows?igsh=MWs4M2JnMjJsdHpvMA=="><i class="fab fa-instagram"></i> Instagram</a>
+                        <a href="https://vk.com/id137870113"><i class="fab fa-vk"></i> ВКонтакте</a>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy;  Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Мобильное меню
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav');
+        
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+        
+        // Плавная прокрутка
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                nav.classList.remove('active');
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Форма записи
+        const appointmentForm = document.getElementById('appointmentForm');
+        
+        appointmentForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Здесь можно добавить отправку данных на сервер
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            console.log('Данные формы:', data);
+            
+            // Показываем сообщение об успехе
+            alert('Спасибо! Ваша заявка принята. Мы свяжемся с вами в ближайшее время для подтверждения записи.');
+            
+            // Очищаем форму
+            this.reset();
+        });
+    </script>
+    
+</body>
+</html>
